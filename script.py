@@ -28,7 +28,11 @@ import requests
 
 
 def check_url_validity(userinput):
-    response = requests.get(userinput)
+    if 'https://' not in userinput:
+        clean = "https://" + userinput
+
+    response = requests.get(clean)
+
     if response.status_code < 400:
         print("Valid.")
     else:
