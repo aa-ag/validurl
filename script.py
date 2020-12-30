@@ -6,7 +6,7 @@ import re
 
 def check_url_validity_(userinput):
     # regular expression to check if URL is valid
-    regex = ("(www.)?" +
+    regex = ("((http|https)://)(www.)?" +
              "[a-zA-Z0-9@:%._\\+~#?&//=]" +
              "{2,256}\\.[a-z]" +
              "{2,6}\\b([a-zA-Z0-9@:%._\\+~#?&//=]*)")
